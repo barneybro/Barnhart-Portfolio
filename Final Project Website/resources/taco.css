@@ -299,3 +299,33 @@ textarea {
 .login-content {
     padding-top: 20%;
 }
+.landing-page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('homepagebg.jpg');
+    height: 87vh;
+    background-size: cover;
+    background-position: center;
+}
+.homepage-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-top: 20vh;
+}
+.landing-btn {
+    text-align: center;
+    margin-top: 2vh;
+}
+.right-homepage-block {
+    margin-top: 20vh;
+}
+.right-homepage-block h2 {
+    color:#721121;
+    text-align:center;
+    font-size:6vh;
+    text-shadow:-1px -1px 0 yellow,
+    1px -1px 0 yellow,
+    -1px 1px 0 yellow,
+    1px 1px 0 yellow;
+}
