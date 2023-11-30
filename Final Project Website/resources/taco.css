@@ -76,6 +76,10 @@ header button{
 .pushable-header:active .front-header {
     transform: translateY(-2px);
 }
+.front-header:hover {
+    cursor: pointer;
+    background-color: #faae61;
+}
 ul.menu-block {
     max-width: 75.5em;
     padding: 0;
@@ -123,6 +127,10 @@ ul.menu-block span + span {
 .pushable-add:active .front-add {
     transform: translateY(-2px);
 }
+.front-add:hover {
+    cursor: pointer;
+    background-color: #75323e;
+}
 .menu-item {
     padding: 10px;
     font-size: 110%;
@@ -153,7 +161,10 @@ ul.menu-block span + span {
     font-size: 1.2em;
     color: #333;
 }
-
+.price-label {
+    color: #721121;
+    font-size: 24px;
+}
 .cart-quantity {
     width: 35%;
 }
@@ -162,6 +173,7 @@ ul.menu-block span + span {
     color: #333;
     margin-left: .5em;
     font-size: 1.2em;
+    font-family: 'Lobster';
 }
 .pushable-remove {
     background: #42181f;
@@ -185,6 +197,10 @@ ul.menu-block span + span {
 .pushable-remove:active .front-remove {
     transform: translateY(-2px);
 }
+.front-remove:hover {
+    cursor: pointer;
+    background-color: #712431;
+}
 .cart-quantity button {
     margin-left: 8vh;
 }
@@ -201,33 +217,28 @@ ul.menu-block span + span {
     margin-right: 25px;
     margin-top: 3vh;
 }
-
 .cart-row:last-child {
     border-bottom: 1px solid black;
 }
-
 .cart-row:last-child .cart-column {
     border: none;
 }
-
 .cart-total {
     text-align: end;
     margin-top: 10px;
     margin-right: 10px;
+    font-size: 1.2em;
 }
-
 .cart-total-title {
     font-weight: bold;
     font-size: 1.5em;
     color: #721121;
     margin-right: 20px;
 }
-
 .cart-total-price {
     color: #721121;
     font-size: 1.1em;
 }
-
 .pushable-purchase {
     background: #42181f;
     border-radius: 12px;
@@ -250,6 +261,10 @@ ul.menu-block span + span {
 }
 .pushable-purchase:active .front-purchase {
     transform: translateY(-2px);
+}
+.front-purchase:hover {
+    cursor: pointer;
+    background-color: #712431;
 }
 .purchase-btn {
     padding: 5vh;
@@ -295,6 +310,7 @@ textarea {
 }
 .btn-login:hover {
     background-color: #572032;
+    cursor: pointer;
 }
 .login-content {
     padding-top: 20%;
