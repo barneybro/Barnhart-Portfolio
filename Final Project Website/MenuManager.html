@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu Manager View</title>
+    <link rel="stylesheet" href="resources/taco.css">
+</head>
+<body>
+
+    <div class="manager-section">
+        <h2>Menu Manager</h2>
+        <form id="addItemForm">
+            <label for="category">Category:</label>
+            <select id="category" required>
+                <option value="appetizers">Appetizers</option>
+                <option value="tacos">Tacos</option>
+                <option value="entrees">Entrees</option>
+                <option value="drinks">Drinks</option>
+            </select>
+            
+            <label for="itemName">Item Name:</label>
+            <input type="text" id="itemName" required>
+            
+            <label for="itemPrice">Item Price:</label>
+            <input type="number" id="itemPrice" step="0.01" required>
+            
+            <button type="button" onclick="addItem()">Add Item</button>
+        </form>
+    </div>
+
+    <div id="menuContainer"></div>
+
+    <script src="resources/taco.js"></script>
+
+</body>
+</html>
+
+
+

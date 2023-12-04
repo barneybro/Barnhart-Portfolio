@@ -85,15 +85,7 @@ ul.menu-block {
     padding: 0;
     overflow-x: hidden;
     list-style: none}
-ul.menu-block li:before {
-    float: left;
-    width: 0;
-    white-space: nowrap;
-    content:
- ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
- ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
- ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
- ". . . . . . . . . . . . . . . . . . . . . "}
+
 ul.menu-block span:first-child {
     padding-right: 0.33em;
 }
@@ -134,6 +126,8 @@ ul.menu-block span + span {
 .menu-item {
     padding: 10px;
     font-size: 110%;
+    border-bottom:3.5px dashed #3d121a;
+    margin-bottom:10px;
 }
 .cart-header {
     color:#721121;
@@ -348,6 +342,12 @@ textarea {
     -1px 1px 0 yellow,
     1px 1px 0 yellow;
 }
+.right-homepage-block h3 {
+    color:yellow;
+    text-align:center;
+    font-size:2vh;
+
+}
 .center{
     margin:auto;
     margin-top:10px;
@@ -355,3 +355,64 @@ textarea {
     margin-left:35%;
     
 }
+
+/*CSS For the Menu Manager*/
+.menu-item-manager {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.item-name {
+    flex: 1;
+}
+
+.dotted-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 2px;
+    width: 70%; /* Adjust the width of the dotted line */
+    border-bottom: 1px dotted #ccc; /* Dotted line */
+}
+
+.price {
+    margin-left: 20px;
+}
+
+.delete-icon {
+    /* Controller for the remove icon */
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 18px;
+    color: #ff0000; 
+}
+.delete-icon:hover{
+    background-color:#656565;
+}
+
+.manager-section {
+    /* Controller for the labels of each Category*/
+    padding: 20px;
+    background-color: #f9f9f9; 
+    margin-bottom: 20px;
+}
+
+.menu-category {
+    margin-bottom: 20px;
+}
+
+.category-header {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.category-items {
+display: flex;
+flex-direction: column;
+}
+
