@@ -1,31 +1,34 @@
+// Menu Items
+const appetizers = [
+    { name: 'Onion Rings', price: 8 },
+    { name: 'Mozzarella Sticks', price: 6 },
+];
+
+const tacos = [
+    { name: 'Taco Salad', price: 8 },
+    { name: 'Taco Supreme', price: 10 },
+];
+
+const entrees = [
+    { name: 'Salmon Ravioli', price: 12 },
+    { name: 'Chicken Chicken Chicken What Combo Are you Pickin\'', price: 15 },
+];
+
+const desserts = [
+    { name: 'Salmon Dessert', price: 7.99 },
+    { name: 'Chocolate Surprise', price: 5.85 },
+];
+
+const drinks = [
+    { name: 'Soda', price: 2 },
+    { name: 'Iced Tea', price: 3 },
+    { name: 'Raspberry Lemonade', price: 2.50 },
+];
+
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Sample menu items in different categories
-    const appetizers = [
-        { name: 'Onion Rings', price: 8 },
-        { name: 'Mozzarella Sticks', price: 6 },
-    ];
+   
 
-    const tacos = [
-        { name: 'Taco Salad', price: 8 },
-        { name: 'Taco Supreme', price: 10 },
-    ];
-
-    const entrees = [
-        { name: 'Salmon Ravioli', price: 12 },
-        { name: 'Chicken Chicken Chicken What Combo Are you Pickin\'', price: 15 },
-    ];
-
-    const desserts = [
-        { name: 'Salmon Dessert', price: 7.99 },
-        { name: 'Chocolate Surprise', price: 5.85 },
-    ];
-
-    const drinks = [
-        { name: 'Soda', price: 2 },
-        { name: 'Iced Tea', price: 3 },
-        { name: 'Raspberry Lemonade', price: 2.50 },
-    ];
 
     // Function to generate the menu based on category
     function generateMenu(category, containerId, categoryName) {
@@ -111,45 +114,19 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// Sample menu items in different categories
-const appetizers = [
-    { name: 'Onion Rings', price: 8 },
-    { name: 'Mozzarella Sticks', price: 6 },
-];
-
-const tacos = [
-    { name: 'Taco Salad', price: 8 },
-    { name: 'Taco Supreme', price: 10 },
-];
-
-const entrees = [
-    { name: 'Salmon Ravioli', price: 12 },
-    { name: 'Chicken Chicken Chicken What Combo Are you Pickin\'', price: 15 },
-];
-
-const desserts = [
-    { name: 'Salmon Dessert', price: 7.99 },
-    { name: 'Chocolate Surprise', price: 5.85 },
-];
-
-const drinks = [
-    { name: 'Soda', price: 2 },
-    { name: 'Iced Tea', price: 3 },
-    { name: 'Raspberry Lemonade', price: 2.50 },
-];
-
 function addItem() {
     const category = document.getElementById('category').value;
     const itemName = document.getElementById('itemName').value;
     const itemPrice = parseFloat(document.getElementById('itemPrice').value);
 
     if (category && itemName && !isNaN(itemPrice)) {
-        const result = findItem(category, itemName, itemPrice);
+        const categoryArray = getCategoryArray(category);
+        const result = findItem(categoryArray, itemName, itemPrice);
 
         if (result.found) {
             if (result.differentPrice) {
                 // Removes the existing item with a different price and changes the price to the new value
-                category.splice(result.index, 1);
+                categoryArray.splice(result.index, 1);
                 addNewItem(category, itemName, itemPrice);
             } else {
                 // Item added is identical to an existing item.
@@ -169,13 +146,34 @@ function addItem() {
 }
 
 function addNewItem(category, itemName, itemPrice) {
+    const categoryArray = getCategoryArray(category);
     const newItem = { name: itemName, price: itemPrice };
-    category.push(newItem);
+    categoryArray.push(newItem);
+}
+
+function getCategoryArray(category) {
+    category = category.toLowerCase().trim()
+
+    switch (category) {
+        case 'appetizers':
+            return appetizers;
+        case 'tacos':
+            return tacos;
+        case 'entrees':
+            return entrees;
+        case 'desserts':
+            return desserts;
+        case 'drinks':
+            return drinks;
+        default:
+            return [];
+    }
 }
 
 // Function to remove an item from a category
 function removeItem(category, index) {
-    category.splice(index, 1);
+    const categoryArray = getCategoryArray(category);
+    categoryArray.splice(index, 1);
     updateMenu();
 }
 
@@ -205,7 +203,7 @@ function updateMenu() {
                 <div class="item-name">${item.name}</div>
                 <div class="dotted-line"></div>
                 <div class="price">$${item.price.toFixed(2)}</div>
-                <span class="delete-icon" onclick="removeItem(categories[${categoryIndex}], ${index})">&#10006;</span>
+                <span class="delete-icon" onclick="removeItem('${getCategoryName(categoryIndex)}', ${index})">&#10006;</span>
             `;
             categoryItemsContainer.appendChild(menuItemElement);
         });
