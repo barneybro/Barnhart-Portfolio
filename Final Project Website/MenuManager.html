@@ -3,19 +3,29 @@
 <head>
     <title>Menu Manager View</title>
     <link rel="stylesheet" href="resources/taco.css">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
 </head>
 <body>
-
+    <header>
+        <div class="nav-block">
+            <a href="index.html"><button class="pushable-header"><span class="front-header">Home</span></button></a>
+            <a href="REALAboutUs.html"><button class="pushable-header"><span class="front-header">About Us</span></button></a>
+            <a href="AboutUs.html"><button class="pushable-header"><span class="front-header">Gallery</span></button></a>
+            <a href="menu.html"><button class="pushable-header"><span class="front-header">Menu</span></button></a>
+        </div>
+    </header>
+    <h1 class="title">Menu Manager</h1>
     <div class="manager-section">
-        <h2>Menu Manager</h2>
         <form id="addItemForm">
             <label for="category">Category:</label>
-            <select id="category" required>
-                <option value="appetizers">Appetizers</option>
-                <option value="tacos">Tacos</option>
-                <option value="entrees">Entrees</option>
-                <option value="drinks">Drinks</option>
-            </select>
+            <div class="select">
+                <select id="category" required>
+                    <option value="appetizers">Appetizers</option>
+                    <option value="tacos">Tacos</option>
+                    <option value="entrees">Entrees</option>
+                    <option value="drinks">Drinks</option>
+                </select>
+            </div>
             
             <label for="itemName">Item Name:</label>
             <input type="text" id="itemName" required>
@@ -23,11 +33,11 @@
             <label for="itemPrice">Item Price:</label>
             <input type="number" id="itemPrice" step="0.01" required>
             
-            <button type="button" onclick="addItem()">Add Item</button>
+            <button class="pushable-header" type="button" onclick="addItem()"><span class="front-header">Add Item</span></button>
         </form>
     </div>
 
-    <div id="menuContainer"></div>
+    <div class="menu-container" id="menuContainer"></div>
 
     <script src="resources/taco.js"></script>
 
