@@ -23,6 +23,12 @@
                 <p>Total: $<span id="total-value">0</span></p>
             </div>
         </article>
-        <script src="resources/taco.js"></script>
+        <script src="resources/taco.js">
+            const appetizers = JSON.parse(localStorage.getItem('appetizers')) || [];
+            const tacos = JSON.parse(localStorage.getItem('tacos')) || [];
+            const entrees = JSON.parse(localStorage.getItem('entrees')) || [];
+            const desserts = JSON.parse(localStorage.getItem('desserts')) || [];
+            const drinks = JSON.parse(localStorage.getItem('drinks')) || [];
+        </script>
     </body>
 </html>
