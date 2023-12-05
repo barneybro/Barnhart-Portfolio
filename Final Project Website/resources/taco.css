@@ -105,7 +105,7 @@ ul.menu-block span + span {
     padding: 0;
     cursor: pointer;
     outline-offset: 2px;
-    margin-left: 1vh;
+    margin-left: 5px;
 }
 .front-add {
     display: block;
@@ -308,6 +308,9 @@ textarea {
 }
 .login-content {
     padding-top: 20%;
+}
+.login-content-2 {
+    padding-top: 6%;
 }
 .login-confirmation{
     padding-top: -5%;
