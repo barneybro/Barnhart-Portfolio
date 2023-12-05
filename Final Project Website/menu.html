@@ -15,10 +15,14 @@
                 <a href="menu.html"><button class="pushable-header"><span class="front-header">Menu</span></button></a>
             </div>
         </header>
-        <article>
+        <article class="containter content-section">
             <div id="menu"></div>
-            <div id="cart">
-                <h2 class="category">Your Order</h2>
+            <h2 class="category">Cart</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
                 <ul id="cart-items"></ul>
                 <p>Total: $<span id="total-value">0</span></p>
             </div>
