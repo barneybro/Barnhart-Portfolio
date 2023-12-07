@@ -34,6 +34,7 @@ header{
     width: 100%;
     background-color: #721121;
     height:11vh;
+    z-index: 999;
 }
 .nav-block {
     max-width: 1140px;
@@ -166,13 +167,6 @@ img {
     -webkit-filter: grayscale(100%);
 }
 
-
-
-
-
-
-
-
 .image-container {
     font-size: 0;
   }
@@ -200,17 +194,6 @@ img {
     border-bottom: solid #721121 75px;
    
 }
-
-
-
-
-
-
-
-
-
-
-
 
 .container {
     width: 100vw;
@@ -297,13 +280,8 @@ ul {
     width: 100vw;  
 }
 
-
-
-
-
-
 .space {
-    height:25vh;
+    height:fit-content;
     background: linear-gradient(-45deg, #f8891b, #fba44d, #FFC07F, #fba44d, #f8891b);
     width: 100%;
     font-size: 25px;
@@ -319,11 +297,9 @@ ul {
     
 .footer .row{
     width:100%;
-    margin:1% 0%;
     padding:0.6% 0%;
     color:#FFC07F;
     font-size:0.8em;
-    margin-left: 17%;
 }
     
 .footer .row a{
@@ -342,12 +318,11 @@ ul {
     
 .footer .row ul li{
     display:inline-block;
-    margin:0px 30px;
+    margin:0 2%;
 }
     
 .footer .row a i{
     font-size:2em;
-    margin:0% 1%;
 }
     
  @media (max-width:720px){
@@ -360,13 +335,12 @@ ul {
     margin:10px 0px;
     text-align:left;
 }
-.footer .row a i{
-    margin:0% 3%;
 }
-    }
-
 ion-icon {
-    font-size: 64px;
-    display: inline-block;
-    padding: 30px;
+        font-size: 64px;
+        display: inline-block;
+        padding: 1.5%;
+}
+footer {
+    height: fit-content;
 }

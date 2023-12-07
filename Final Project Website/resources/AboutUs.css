@@ -46,6 +46,7 @@ article {
     width: 100%;
     background-color: #721121;
     height:11vh;
+    z-index: 999;
 }
 .category{
     color:#721121;
@@ -226,9 +227,10 @@ img {
     text-align:center;
     font-size:30px;
     text-shadow:0in 0in 0.1in yellow;
-    height: 30%;
+    height: fit-content;
     padding-top: 5%;
     width: 100%;
+    padding-bottom: 3%;
 }
 
 .img2 {
@@ -260,11 +262,9 @@ img {
     
 .footer .row{
     width:100%;
-    margin:1% 0%;
     padding:0.6% 0%;
     color:#FFC07F;
     font-size:0.8em;
-    margin-left: 17%;
 }
     
 .footer .row a{
@@ -283,12 +283,11 @@ img {
     
 .footer .row ul li{
     display:inline-block;
-    margin:0px 30px;
+    margin:0 2%;
 }
     
 .footer .row a i{
     font-size:2em;
-    margin:0% 1%;
 }
     
  @media (max-width:720px){
@@ -301,12 +300,12 @@ img {
     margin:10px 0px;
     text-align:left;
 }
-.footer .row a i{
-    margin:0% 3%;
-}
     }
 ion-icon {
         font-size: 64px;
         display: inline-block;
-        padding: 30px;
+        padding: 1.5%;
+}
+footer {
+    height: fit-content;
 }

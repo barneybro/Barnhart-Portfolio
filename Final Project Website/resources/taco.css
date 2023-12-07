@@ -40,12 +40,20 @@ article {
 header{
     height:13vh;
     background-color:#721121;
-    display:inline-block;
+    display:flex;
     width: 100%;
 }
 .nav-block {
     max-width: 1140px;
     margin: 0 auto;
+    display: inline-block;
+    justify-content: space-between;
+}
+.nav-left {
+    float: left;
+}
+.nav-right {
+    float: right;
 }
 header button{
     display:inline-block;
