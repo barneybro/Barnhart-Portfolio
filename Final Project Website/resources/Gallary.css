@@ -24,21 +24,18 @@ body{
 header{
     height:13vh;
     background-color:#721121;
-    display:inline-block;
     width: 100%;
-}
-.sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #721121;
-    height:11vh;
-    z-index: 999;
 }
 .nav-block {
     max-width: 1140px;
+    justify-content: space-between;
     margin: 0 auto;
+}
+.nav-left {
+    float: left;
+}
+.nav-right {
+    float: right;
 }
 h1 {
     text-align: center;
@@ -128,6 +125,13 @@ header button{
 .front-header:hover {
     cursor: pointer;
     background-color: #faae61;
+}
+a{
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+    color: #721121;
 }
 .col:first-child {
     margin-left: 0;

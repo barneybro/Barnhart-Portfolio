@@ -39,14 +39,23 @@ article {
     border-bottom: 50px solid #721121;
     padding-top: 5%;
 }
-.sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
+header{
+    height:13vh;
+    background-color:#721121;
     width: 100%;
-    background-color: #721121;
-    height:11vh;
+    position: fixed;
     z-index: 999;
+}
+.nav-block {
+    max-width: 1140px;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.nav-left {
+    float: left;
+}
+.nav-right {
+    float: right;
 }
 .category{
     color:#721121;
@@ -103,6 +112,13 @@ header button{
 .front-header:hover {
     cursor: pointer;
     background-color: #faae61;
+}
+a{
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+    color: #721121;
 }
 .about-us {
     width: 100%;
