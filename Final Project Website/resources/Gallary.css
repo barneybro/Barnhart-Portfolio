@@ -125,6 +125,10 @@ header button{
 .pushable-header:active .front-header {
     transform: translateY(-2px);
 }
+.front-header:hover {
+    cursor: pointer;
+    background-color: #faae61;
+}
 .col:first-child {
     margin-left: 0;
 }
