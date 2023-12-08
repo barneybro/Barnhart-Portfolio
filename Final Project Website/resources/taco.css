@@ -527,3 +527,6 @@ ion-icon {
 footer {
     height: fit-content;
 }
+.twitter-embedded {
+    background-color: black;
+}
