@@ -40,12 +40,18 @@ article {
 header{
     height:13vh;
     background-color:#721121;
-    display:inline-block;
     width: 100%;
 }
 .nav-block {
     max-width: 1140px;
+    justify-content: space-between;
     margin: 0 auto;
+}
+.nav-left {
+    float: left;
+}
+.nav-right {
+    float: right;
 }
 header button{
     display:inline-block;
@@ -79,6 +85,13 @@ header button{
 .front-header:hover {
     cursor: pointer;
     background-color: #faae61;
+}
+a{
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+    color: #721121;
 }
 ul.menu-block {
     max-width: 75.5em;
@@ -456,4 +469,61 @@ select:hover {
 }
 .select:hover::after {
     color: #F39C12;
+}
+.footer{
+    margin-bottom: -20%;
+    background:#460611;
+    padding:30px ;
+    font-family: 'Play', sans-serif;
+    text-align:center;
+}
+    
+.footer .row{
+    width:100%;
+    padding:0.6% 0%;
+    color:#FFC07F;
+    font-size:0.8em;
+}
+    
+.footer .row a{
+    text-decoration:none;
+    color:#FFC07F;
+    transition:0.5s;
+}
+    
+.footer .row a:hover{
+    color:#fff;
+}
+    
+.footer .row ul{
+    width:100%;
+}
+    
+.footer .row ul li{
+    display:inline-block;
+    margin:0 2%;
+}
+    
+.footer .row a i{
+    font-size:2em;
+}
+    
+ @media (max-width:720px){
+    .footer{
+    text-align:left;
+    padding:5%;
+}
+.footer .row ul li{
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+}
+    }
+ion-icon {
+        font-size: 64px;
+        display: inline-block;
+        padding: 1.5%;
+}
+footer {
+    height: fit-content;
 }
