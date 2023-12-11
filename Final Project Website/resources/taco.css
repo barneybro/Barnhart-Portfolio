@@ -22,7 +22,7 @@ body{
     }
 }
 article {
-    max-width: 1140px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 .title{
@@ -43,7 +43,7 @@ header{
     width: 100%;
 }
 .nav-block {
-    max-width: 1140px;
+    max-width: 1440px;
     justify-content: space-between;
     margin: 0 auto;
 }
@@ -94,10 +94,11 @@ a:visited {
     color: #721121;
 }
 ul.menu-block {
-    max-width: 75.5em;
+    max-width: 90em;
     padding: 0;
     overflow-x: hidden;
-    list-style: none}
+    list-style: none
+    }
 
 ul.menu-block span:first-child {
     padding-right: 0.33em;
@@ -207,6 +208,9 @@ ul.menu-block span + span {
 .front-remove:hover {
     cursor: pointer;
     background-color: #712431;
+}
+.cart-block {
+    padding-bottom: 5%;
 }
 .cart-quantity button {
     margin-left: 8vh;
@@ -338,7 +342,7 @@ textarea {
 .homepage-content {
     display: flex;
     justify-content: space-between;
-    max-width: 1140px;
+    max-width: 1440px;
     margin: 0 auto;
     padding-top: 20vh;
 }
@@ -418,7 +422,7 @@ textarea {
     /* Controller for the labels of each Category*/
     padding: 20px;
     background-color: #721121; 
-    max-width: 1140px;
+    max-width: 1440px;
     margin: 0 auto;
     margin-top: 3%;
     margin-bottom: 3%;
@@ -443,7 +447,8 @@ flex-direction: column;
 }
 .menu-container {
     margin: 0 auto;
-    max-width: 1140px;
+    max-width: 1440px;
+    padding-bottom: 10%;
 }
 .menu-container h2 {
     color:#721121;
