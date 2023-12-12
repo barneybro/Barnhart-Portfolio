@@ -37,8 +37,43 @@
                 <ul id="cart-items"></ul>
                 <p>Total: $<span id="total-value">0</span></p>
             </div>
-            </div>
         </article>
+        <div id="overlay" class="overlay"></div>
+
+        <div id="cartPopup1" class="model">
+            <div class="model-content">
+                <h1>Select Payment Type</h1>
+                <button onclick="selectPayment('Card')">Card</button>
+                <button onclick="selectPayment('PayAtStore')">Pay at Store</button>
+                <button onclick="closeCartPopup1()">Close</button>
+            </div>
+        </div>
+        
+        <div id="receiptPopup" class="model">
+            <div class="model-content">
+                <h1>Receipt</h1>
+                <div id="receiptContent"></div>
+                <div>Total: $<span id="receiptTotal"></span></div>
+                <button onclick="closeReceiptPopup()">Close</button>
+            </div>
+        </div>
+        
+        <div id="cardPaymentPopup" class="model">
+            <div class="model-content">
+                <h1>Card Payment</h1>
+                <label for="cardHolderName">Cardholder Name:</label>
+                <input type="text" id="cardHolderName" placeholder="Enter cardholder name">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" placeholder="Enter card number">
+                <label for="expirationDate">Expiration Date:</label>
+                <input type="text" id="expirationDate" placeholder="Enter expiration date">
+                <button onclick="processCardPayment()">Submit Payment</button>
+                <button onclick="closeCardPaymentPopup()">Cancel</button>
+            </div>
+        </div>
+        
+        <div class="checkoutBtn" onclick="openCartPopup1()"><p>Checkout</p></div>
+        
         <footer>
             <div class="footer">
                 <div class="row">
