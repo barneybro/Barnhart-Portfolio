@@ -538,31 +538,90 @@ footer {
 .twitter-embedded {
     background-color: black;
 }
-.checkoutBtn{
-    margin: 30px 0px 0px 10px;
-    color:yellow;
-    font-size:40px;
-    height:100px;
-    width:200px;
-    border:5px inset yellow;
-    border-radius:10px;
-    background-color:rgb(92, 13, 13);
-    text-align:center;
-    line-height:100px;
-}
-.checkoutBtn:hover{
-    color:red;
-}
 #cartPopup1, #receiptPopup, #cardPaymentPopup {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: #721121;
     padding: 20px;
     z-index: 2;
+    border-radius: 10px;
+    border: #000000;
 }
 #cartPopup1 .model-content, #receiptPopup .model-content, #cardPaymentPopup .model-content {
     text-align: center;
+}
+.pushable-checkout {
+    background: #42181f;
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+}
+.front-checkout {
+    display: flex;
+    padding: 20px 50px;
+    border-radius: 12px;
+    font-size: 2.25rem;
+    background: #721121;
+    color: #FFC07F;
+    font-family: 'Lobster';
+    text-decoration: solid;
+    transform: translateY(-6px);
+}
+.pushable-checkout:active .front-checkout {
+    transform: translateY(-2px);
+}
+.front-checkout:hover {
+    cursor: pointer;
+    background-color: #712431;
+}
+.checkout-btn {
+    text-align: center;
+    padding-bottom: 3%;
+}
+.model-content h1 {
+    color: #FFC07F;
+    display: block;
+    font-size: 36px;
+    text-shadow:
+    -1px -1px 0 #000000,
+    1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+    1px 1px 0 #000000;
+    padding-bottom: 3%;
+}
+.total-overlay {
+    color: #FFC07F;
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+.total-price-cart {
+    color:#721121;
+    font-size:4vh;
+    text-shadow:0in 0in 0.1in yellow;
+    padding-top: 2%;
+}
+.cart-items {
+    color: #000;
+    font-size: 1.5em;
+    margin-right: 1em;
+}
+.cart-items button {
+    padding: 2px 9px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background: #721121;
+    color: white;
+    transform: translateY(-6px);
+    transform: translateX(1em);
+    border-color: #000;
+}
+.items-block {
+    max-width: 500px;
+    display: block;
+    justify-content: space-between;
 }

@@ -29,13 +29,10 @@
             <div id="menu"></div>
             <div class="cart-block">
                 <h2 class="category">Cart</h2>
-            <div class="cart-row">
-                <span class="cart-item cart-header cart-column">ITEM</span>
-                <span class="cart-price cart-header cart-column">PRICE</span>
-                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
-            </div>
-                <ul id="cart-items"></ul>
-                <p>Total: $<span id="total-value">0</span></p>
+                <div class="items-block">
+                    <ul class="cart-items" id="cart-items"></ul>
+                </div>
+                <p class="total-price-cart">Total: $<span id="total-value">0</span></p>
             </div>
         </article>
         <div id="overlay" class="overlay"></div>
@@ -53,7 +50,7 @@
             <div class="model-content">
                 <h1>Receipt</h1>
                 <div id="receiptContent"></div>
-                <div>Total: $<span id="receiptTotal"></span></div>
+                <div class="total-overlay">Total: $<span id="receiptTotal"></span></div>
                 <button onclick="closeReceiptPopup()">Close</button>
             </div>
         </div>
@@ -71,9 +68,10 @@
                 <button onclick="closeCardPaymentPopup()">Cancel</button>
             </div>
         </div>
-        
-        <div class="checkoutBtn" onclick="openCartPopup1()"><p>Checkout</p></div>
-        
+        <div class="checkout-btn">
+          <button class="pushable-checkout" onclick=openCartPopup1()><span class="front-checkout">Checkout</span></button>
+        </div>
+
         <footer>
             <div class="footer">
                 <div class="row">
